@@ -1,0 +1,14 @@
+/* Variables de marca (colores, tamaños, fuente, sombra) */
+
+:root {
+  /* Marca BCP: azul y naranja del logo (referencia #002A8D y #FF7800). Verde y rojo solo para acierto y error. */
+  --blue: #002A8D; --orange: #FF7800; --white: #FFFFFF;
+  --pale: #E8EEFB; --ink: #0B1B4D; --green: #2BB673; --red: #E5484D;
+  --canvas: #F7F9FD; --muted: #55657F; --line: #E3E9F3;
+  --green-ink: #167344; --red-ink: #B72C39; --orange-ink: #AD4A00;
+  --blue-deep: #001D63; --blue-soft: #1D4BB0; --orange-tint: #FFE6D0;
+  --fs-title: clamp(27px, 2.2vw + 14px, 34px); --fs-sub: 20px; --fs-body: clamp(15px, .35vw + 13.4px, 16px); --fs-label: 12px;
+  --chev: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 15 170 245'%3E%3Cpath d='M92.7,29.2c30,15.2,54.1,37.1,71.7,65.4c10.8,17.4,9.5,36.7-2.6,53.5c-24.9,34.9-58.1,60.5-96.5,78.2c-25.8,11.9-54.3-2-65.3-30c15.5-8.2,30.9-16.6,45-26.9c21.2-15.5,39.5-33.4,48.6-58.8C106,83.3,107.1,56.1,92.7,29.2z'/%3E%3Cpath d='M92.7,29.2c14.3,26.9,13,53.9,0.7,81.1C74.6,89.9,51.2,76,26.5,65C39.5,29.8,69.1,14.4,92.7,29.2z'/%3E%3C/svg%3E");
+  --font: 'Nunito', ui-rounded, 'Arial Rounded MT Bold', system-ui, sans-serif;
+  --shadow: 0 8px 25px rgba(11, 27, 77, .045);
+}

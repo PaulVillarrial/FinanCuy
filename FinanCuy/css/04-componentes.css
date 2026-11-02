@@ -1,0 +1,24 @@
+/* Componentes compartidos: pie de página, navegación móvil, títulos de página y botones */
+
+.app-footer { max-width: 1142px; margin: 0 auto; padding: 17px 0 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; color: var(--muted); font-size: 10px; line-height: 1.7; }
+.app-footer p:last-child { text-align: right; }
+.footer-wrap { padding: 0 44px; }
+.bottom-nav { display: none; }
+.page-top { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin: 12px 0 28px; }
+.page-top h1 { font-size: 34px; letter-spacing: -1.1px; font-weight: 900; margin-top: 10px; }
+.page-top p { color: var(--muted); margin-top: 10px; font-size: 14px; }
+.page-top .page-cuy { width: 135px; height: 135px; }
+.btn { min-height: 48px; padding: 12px 23px; border: 1px solid transparent; border-radius: 11px; font-weight: 900; font-size: 14px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; transition: background .2s, transform .2s, box-shadow .2s; text-decoration: none; }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(1px); }
+.btn.primary { background: var(--orange); color: var(--ink); box-shadow: 0 4px 0 #D96000; }
+.btn.primary:hover { background: #FF8B25; }
+.btn.blue { background: var(--blue); color: white; box-shadow: 0 4px 0 #001D63; }
+.btn.ghost { color: var(--muted); background: transparent; border: 0; padding: 10px 12px; }
+.btn.danger { color: white; background: var(--red-ink); }
+.btn:disabled { background: #E3E8F2; color: #8792A9; box-shadow: none; border-color: transparent; transform: none; }
+.btn.small { min-height: 44px; padding: 9px 15px; font-size: 12px; }
+.btn .icon { width: 18px; height: 18px; }
+.button-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.logo-link { display: block; min-height: 0; padding: 0; border: 0; background: none; cursor: pointer; border-radius: 6px; }
+.logo-link:hover { opacity: .85; }

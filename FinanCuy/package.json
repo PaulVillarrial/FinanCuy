@@ -1,0 +1,8 @@
+{
+  "name": "financuy",
+  "version": "1.0.0",
+  "description": "FinanCuy BCP: prototipo educativo para aprender a decidir, ahorrar y emprender.",
+  "scripts": { "start": "node server.js" },
+  "license": "UNLICENSED",
+  "private": true
+}

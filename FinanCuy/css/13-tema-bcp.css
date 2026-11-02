@@ -1,0 +1,95 @@
+/* Tema de marca BCP: sobrescribe colores y tipografía de las capas anteriores (debe cargarse después) */
+
+/* ===== Identidad BCP =====
+   Los valores de color y tamaño viven en :root; esta capa solo los aplica. */
+
+/* Tipografía: una sola familia (Nunito, con alternativa del sistema). Cuatro tamaños: título, subtítulo, cuerpo y etiqueta. */
+body { font-family: var(--font); font-size: var(--fs-body); font-weight: 500; }
+button, input, select { font-family: inherit; }
+.hero-copy h1, .page-top h1, .lesson-heading h1, .summary h1, .empty-grade h1 { font-size: var(--fs-title); font-weight: 800; letter-spacing: -.6px; line-height: 1.15; }
+.hero-copy h2, .section-heading h2, .study-content h2, .grade-card h3, .modal .grade-card h3, .node-info h3, .modal h2,
+.question-prompt, .practice-question, .tool-heading, .product h2, .badge-item h2, .shop-preview h2, .key-line, .cuy-quote,
+.level-up, .shop-balance, .balance-value, .reward-number, .result-item strong, .sidebar-brand { font-size: var(--fs-sub); font-weight: 800; letter-spacing: -.2px; line-height: 1.3; }
+.theory-text, .scenario-intro, .answer-option, .practice-options .answer-option, .feedback p, .grade-card p, .node-info p, .section-heading p,
+.page-top p, .hero-copy p, .exercise-help, .order-row p, .pair-button, .classify-row > p, .modal > p, .modal-copy, .summary > p, .equilibrium,
+.tool-area > p, .toast, .text-input, .field input, .field select, .meme-panel p, .balance-change, .nav-link, .btn, .metric, .header-title,
+.feedback strong, .shop-preview p, .empty-grade p, .new-badges { font-size: var(--fs-body); }
+.theory-text, .scenario-intro, .feedback p, .grade-card p, .node-info p, .section-heading p, .page-top p, .hero-copy p, .exercise-help,
+.modal > p, .modal-copy, .summary > p, .meme-panel p, .shop-preview p, .empty-grade p { font-weight: 500; }
+.answer-option, .pair-button, .order-row p { font-weight: 600; }
+.eyebrow, .grade-level, .node-status, .study-kicker, .balance-caption, .brand-sub, .level-label, .prototype-note, .reset-button, .app-footer,
+.welcome-assurance, .availability, .badge-status, .tool-note, .result-item span, .answer-letter, .step-part, .practice-count, .storage-notice,
+.grade-card-bottom, .product p, .badge-item p, .back-link, .field > span, .key-line small, .form-error, .classify-choice, .bottom-nav button,
+.shop-balance small, .balance-change small, .btn.small, .product .btn, .grade-switch, .side-guide small, .side-guide p, .side-level .level-label { font-size: var(--fs-label); }
+.eyebrow { letter-spacing: .8px; }
+.modal-copy { color: var(--muted); line-height: 1.8; margin-top: 15px; }
+@media (max-width: 450px) { .pair-button { font-size: var(--fs-label); } }
+
+/* Logo: nunca se deforma ni lleva sombras o contornos; la separación libre equivale a la altura de la B. */
+.bcp-mark { display: block; flex-shrink: 0; overflow: visible; color: var(--blue); filter: none; }
+.bcp-mark.on-blue { color: var(--white); }
+.bcp-mark .bcp-ink { fill: currentColor; }
+.bcp-mark .bcp-chev { fill: var(--orange); }
+.logo-panel { display: flex; align-items: center; justify-content: center; height: 88px; background: var(--blue); }
+.hero-logo { display: flex; margin-bottom: 30px; }
+.footer-logo { padding: 24px 24px 24px 0; flex-shrink: 0; }
+
+/* Encabezado azul */
+.sidebar { --pad: 22px; padding: 0 var(--pad) 22px; border-right: 0; box-shadow: 1px 0 0 var(--line); }
+.logo-panel { margin: 0 calc(var(--pad) * -1 - 1px) 0 calc(var(--pad) * -1); }
+.brand-block { margin-top: 24px; }
+.sidebar-brand { margin-top: 0; }
+@media (max-width: 1200px) { .sidebar { --pad: 15px; } }
+@media (max-width: 820px) { .sidebar { --pad: 11px; } }
+.topbar { background: var(--blue); border-bottom: 0; color: var(--white); }
+.topbar-brand { padding: 10px 0; }
+.header-title, .metric, .metric.fire, .metric.seeds, .metric.xp { color: var(--white); }
+.header-title { font-weight: 800; }
+.metric .icon { color: var(--orange); }
+.heart-meter .icon { color: var(--orange); fill: var(--orange); }
+.heart-meter .icon.empty { color: rgba(255, 255, 255, .5); fill: rgba(255, 255, 255, .16); }
+.grade-switch { background: var(--white); color: var(--blue); border-color: var(--white); }
+.grade-switch:hover { background: var(--pale); }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible { outline-color: var(--blue-soft); }
+.topbar :focus-visible, .welcome-hero :focus-visible, .logo-panel :focus-visible { outline-color: var(--white); }
+
+/* Pantalla inicial azul */
+.welcome-hero { background: var(--blue); color: var(--white); border-radius: 24px; padding: 36px 44px; overflow: hidden; }
+.welcome-hero .eyebrow, .hero-copy h1, .hero-copy h2 { color: var(--white); }
+.hero-copy h1 .icon { color: var(--orange); }
+.hero-copy p { color: var(--pale); }
+.hero-stage::before { background: var(--pale); }
+.hero-stage::after { border-color: rgba(255, 255, 255, .45); }
+@media (max-width: 680px) { .welcome-hero { padding: 28px 22px 24px; border-radius: 20px; } .hero-logo { margin-bottom: 24px; } }
+@media (max-width: 560px) { .hero-logo { justify-content: center; } .welcome-hero { padding: 28px 20px 20px; } }
+
+/* Botones: principal naranja con texto azul noche (mejor contraste); secundario azul con texto blanco */
+.btn.secondary { background: var(--blue); color: var(--white); border-color: var(--blue); box-shadow: 0 4px 0 var(--blue-deep); }
+.btn.secondary:hover { background: var(--blue-soft); border-color: var(--blue-soft); }
+
+/* Íconos de trazo grueso y redondeado */
+.icon { stroke-width: 2.4; }
+.grade-icon .icon, .product-art .icon { stroke-width: 2.2; }
+
+/* Chevron del logo como motivo: viñetas, separadores y punta de las barras de progreso */
+.eyebrow::before, .nav-link .nav-dot, .app-footer::before, .lesson-actions::before {
+  content: ''; background: var(--orange);
+  -webkit-mask: var(--chev) center / contain no-repeat; mask: var(--chev) center / contain no-repeat;
+}
+.eyebrow::before { width: 11px; height: 16px; }
+.nav-link .nav-dot { width: 9px; height: 14px; border-radius: 0; }
+.app-footer, .lesson-actions { position: relative; }
+.app-footer::before, .lesson-actions::before { position: absolute; top: -8px; left: 0; width: 10px; height: 15px; }
+.thin-progress > span, .step-bar span { clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 50%, calc(100% - 5px) 100%, 0 100%); }
+@media (min-width: 681px) { .app-footer { align-items: center; } }
+@media (max-width: 680px) { .topbar-brand > span { display: none; } }
+
+/* Solo marca: sin púrpuras ni dorados; verde y rojo reservados a acierto y error */
+.grade-card:nth-child(2) .grade-icon { background: var(--orange-tint); color: var(--orange-ink); }
+.grade-card:nth-child(3) .grade-icon { background: var(--blue); color: var(--white); }
+.availability, .badge-item.earned .badge-status { color: var(--blue); }
+.badge-item.earned .badge-medal { color: var(--orange-ink); }
+.badge-item.earned .badge-medal::before { background: var(--orange-tint); }
+.shop-balance { color: var(--orange-ink); }
+.storage-notice { background: var(--orange-tint); color: var(--orange-ink); border-bottom-color: #FFC999; }
+.toast .icon { color: var(--orange); }

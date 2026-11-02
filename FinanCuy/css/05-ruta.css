@@ -1,0 +1,28 @@
+/* Ruta de aprendizaje: progreso de unidad, camino de lecciones y compañero */
+
+.unit-progress { display: flex; align-items: center; gap: 16px; padding-bottom: 23px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+.unit-progress .thin-progress { height: 8px; flex: 1; max-width: 430px; }
+.unit-progress .thin-progress > span { background: var(--blue); }
+.route-layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(220px, 1fr); gap: 35px; }
+.lesson-path { position: relative; padding: 26px 0 22px; }
+.path-line { position: absolute; width: 180px; height: 560px; left: 0; top: 30px; pointer-events: none; }
+.lesson-node-row { position: relative; display: flex; align-items: center; gap: 23px; height: 142px; margin-left: var(--offset, 0px); }
+.lesson-node { position: relative; width: 76px; height: 76px; min-width: 76px; border-radius: 50%; border: 5px solid var(--canvas); background: #E3E8F1; color: #9CA8BE; box-shadow: 0 6px 0 #CED6E5, 0 0 0 2px #E2E7F1; display: flex; justify-content: center; align-items: center; transition: transform .2s; }
+.lesson-node .icon { width: 29px; height: 29px; }
+.lesson-node.available { background: var(--orange); color: var(--ink); box-shadow: 0 6px 0 #D65E00, 0 0 0 2px #FFD9B8; }
+.lesson-node.completed { background: var(--blue); color: white; box-shadow: 0 6px 0 #001D65, 0 0 0 2px #C5D4F5; }
+.lesson-node:not(.locked):hover { transform: translateY(-4px); }
+.node-info { max-width: 230px; }
+.node-info .node-status { font-size: 9px; letter-spacing: 1.1px; text-transform: uppercase; color: var(--muted); font-weight: 900; }
+.node-info .node-status.current { color: var(--orange-ink); }
+.node-info h3 { font-size: 16px; font-weight: 900; margin: 6px 0; }
+.node-info p { font-size: 11px; color: var(--muted); }
+.node-info.locked { color: var(--muted); }
+.tiny-stars { display: flex; gap: 3px; margin-top: 6px; color: var(--orange); }
+.tiny-stars .icon { width: 14px; height: 14px; fill: var(--orange); }
+.tiny-stars .unearned { color: #CFD7E6; fill: #E4E9F2; }
+.route-companion { align-self: start; position: sticky; top: 123px; padding: 35px 5px; text-align: center; }
+.route-companion > .cuy-svg { width: 230px; height: 230px; margin: 0 auto; }
+.cuy-quote { position: relative; padding: 0 8px; color: var(--blue); font-size: 17px; font-weight: 800; max-width: 300px; margin: 0 auto 20px; line-height: 1.5; }
+.route-companion .btn { width: 100%; max-width: 250px; }
+.route-companion small { display: block; margin-top: 18px; color: var(--muted); font-size: 11px; }

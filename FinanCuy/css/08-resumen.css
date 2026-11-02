@@ -1,0 +1,18 @@
+/* Pantalla de resumen al terminar una lección (estrellas y recompensas) */
+
+.summary { max-width: 650px; margin: 0 auto; padding: 5px 0 40px; text-align: center; }
+.summary > .cuy-svg { width: 215px; height: 220px; margin: 0 auto; animation: feedback-in .7s both; }
+.summary h1 { font-size: 38px; font-weight: 1000; letter-spacing: -1px; }
+.summary > p { color: var(--muted); font-size: 14px; margin-top: 11px; }
+.summary-stars { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 20px 0 8px; }
+.summary-stars .icon { width: 43px; height: 43px; fill: var(--orange); color: var(--orange); animation: star-pop .65s both; }
+.summary-stars .icon:nth-child(2) { width: 55px; height: 55px; animation-delay: .12s; }
+.summary-stars .icon:nth-child(3) { animation-delay: .24s; }
+.summary-stars .unearned { color: #D6DEEE; fill: #E6ECF6; }
+.reward-line { display: flex; justify-content: center; gap: 35px; padding: 24px 0; margin: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.reward-number { font-size: 26px; font-weight: 900; color: var(--blue); display: flex; align-items: center; justify-content: center; gap: 7px; }
+.reward-number .icon { width: 24px; height: 24px; }
+.reward-line p { font-size: 11px; color: var(--muted); margin-top: 4px; }
+.summary .button-row { justify-content: center; margin-top: 25px; }
+.level-up { color: var(--blue); font-weight: 900; margin: 14px 0; font-size: 18px; animation: star-pop .7s ease both; }
+.new-badges { font-size: 12px; color: var(--orange-ink); font-weight: 800; line-height: 1.8; }

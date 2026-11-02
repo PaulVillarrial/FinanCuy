@@ -1,0 +1,33 @@
+/* Logros (insignias), estado sin grado y tienda mágica */
+
+.badge-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 30px; padding: 5px 0 30px; }
+.badge-item { text-align: center; padding: 25px 9px; border: 0; border-bottom: 1px solid var(--line); background: transparent; }
+.badge-medal { width: 84px; height: 90px; margin: 0 auto 18px; position: relative; color: #9AA9C3; display: flex; align-items: center; justify-content: center; }
+.badge-medal::before { content: ''; position: absolute; inset: 5px 4px; background: #E9EEF6; clip-path: polygon(50% 0, 91% 22%, 91% 73%, 50% 100%, 9% 73%, 9% 22%); }
+.badge-medal::after { content: ''; position: absolute; inset: 12px 11px; border: 1px solid currentColor; opacity: .5; clip-path: polygon(50% 0, 91% 22%, 91% 73%, 50% 100%, 9% 73%, 9% 22%); background: #FFFFFF44; }
+.badge-medal .icon { width: 33px; height: 33px; z-index: 1; }
+.badge-item h2 { font-size: 15px; font-weight: 900; }
+.badge-item p { font-size: 11px; color: var(--muted); margin-top: 8px; line-height: 1.7; }
+.badge-status { font-size: 10px; color: var(--muted); display: block; margin-top: 10px; font-weight: 800; }
+.badge-item.earned .badge-status { color: var(--green-ink); }
+.badge-item:hover .badge-medal { transform: translateY(-4px); transition: transform .2s; }
+.empty-grade { text-align: center; padding: 20px 0 50px; max-width: 500px; margin: 0 auto; }
+.empty-grade > .cuy-svg { width: 200px; margin: 0 auto; }
+.empty-grade h1 { font-size: 30px; font-weight: 900; margin-bottom: 14px; }
+.empty-grade p { color: var(--muted); margin-bottom: 25px; }
+.shop-layout { display: grid; grid-template-columns: .9fr 1.2fr; gap: 32px; margin: 30px 0 40px; }
+.shop-preview { text-align: center; align-self: start; position: sticky; top: 120px; padding-top: 25px; }
+.shop-preview > .cuy-svg { width: 300px; max-width: 100%; height: 310px; margin: 0 auto; }
+.shop-preview h2 { font-size: 18px; font-weight: 900; }
+.shop-preview p { font-size: 12px; color: var(--muted); margin-top: 9px; }
+.shop-products { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+.product { background: white; border: 1px solid #E0E7F2; border-radius: 14px; padding: 20px 17px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.product.equipped { border-color: #93ADD9; background: #F4F7FF; }
+.product-art { height: 68px; display: flex; align-items: center; justify-content: center; color: var(--blue); }
+.product-art .icon { width: 47px; height: 47px; stroke-width: 1.5; }
+.product h2 { font-size: 14px; font-weight: 900; margin-top: 10px; }
+.product p { font-size: 10px; color: var(--muted); margin: 7px 0 13px; min-height: 31px; }
+.product .btn { width: 100%; margin-top: auto; font-size: 11px; padding: 9px; }
+.shop-balance { display: flex; align-items: center; gap: 8px; font-size: 22px; font-weight: 900; white-space: nowrap; }
+.shop-balance .icon { width: 29px; height: 29px; }
+.shop-balance small { font-size: 10px; color: var(--muted); display: block; font-weight: 700; }

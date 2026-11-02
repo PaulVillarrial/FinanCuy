@@ -1,0 +1,37 @@
+/* Pantalla de bienvenida: portada, cuy animado y tarjetas de grado */
+
+.welcome-hero { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; min-height: 337px; gap: 18px; position: relative; }
+.hero-copy { padding-bottom: 13px; animation: rise-in .65s ease both; }
+.hero-copy h1 { font-size: clamp(40px, 4.4vw, 62px); font-weight: 1000; letter-spacing: -2.8px; color: var(--blue); margin: 14px 0 13px; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.hero-copy h1 .icon { width: 29px; height: 34px; align-self: flex-start; margin-top: 5px; }
+.hero-copy h2 { font-size: clamp(25px, 2.5vw, 34px); letter-spacing: -.9px; font-weight: 800; line-height: 1.24; }
+.hero-copy p { margin-top: 15px; max-width: 410px; font-size: 14px; line-height: 1.8; }
+.hero-stage { height: 338px; position: relative; display: flex; align-items: center; justify-content: center; isolation: isolate; animation: rise-in .8s .08s ease both; }
+.hero-stage::before { content: ''; position: absolute; width: 290px; height: 290px; border-radius: 50%; z-index: -1; top: 21px; }
+.hero-stage::after { content: ''; position: absolute; width: 315px; height: 315px; border: 1px dashed #D6E1F9; border-radius: 50%; z-index: -1; top: 8px; transform: rotate(-16deg); }
+.hero-stage .cuy-svg { width: 365px; height: 355px; overflow: visible; }
+.hero-stage .cuy-body { animation: cuy-float 4.5s ease-in-out infinite; transform-origin: 180px 240px; }
+.magic-glint { animation: twinkle 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.magic-glint:nth-of-type(2n) { animation-delay: 1.3s; }
+.grade-section { padding-top: 19px; animation: rise-in .65s .16s ease both; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 20px; }
+.section-heading h2 { font-size: 23px; font-weight: 900; letter-spacing: -.55px; }
+.section-heading p { font-size: 13px; margin-top: 7px; color: var(--muted); }
+.availability { display: flex; align-items: center; gap: 6px; color: var(--green-ink); font-size: 11px; font-weight: 800; padding-bottom: 3px; white-space: nowrap; }
+.availability .icon { width: 14px; height: 14px; }
+.grade-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px; }
+.grade-card { position: relative; text-align: left; padding: 23px 22px 17px; border: 1px solid #DFE6F2; border-radius: 15px; background: var(--white); box-shadow: var(--shadow); transition: transform .2s, border-color .2s, box-shadow .2s; display: flex; flex-direction: column; min-height: 215px; }
+.grade-card:hover { transform: translateY(-5px); border-color: #A3B8EC; box-shadow: 0 10px 25px #002A8D0D; }
+.grade-card:active { transform: translateY(-1px); }
+.grade-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.grade-icon { width: 48px; height: 48px; border-radius: 13px; display: flex; align-items: center; justify-content: center; background: #ECF2FF; color: var(--blue); }
+.grade-icon .icon { width: 28px; height: 28px; stroke-width: 1.7; }
+.grade-level { color: var(--muted); font-weight: 800; font-size: 9px; letter-spacing: 1.1px; text-transform: uppercase; }
+.grade-card h3 { font-size: 19px; font-weight: 900; letter-spacing: -.5px; margin-bottom: 7px; }
+.grade-card p { font-size: 12px; color: var(--muted); }
+.grade-card-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 14px; font-size: 11px; color: var(--muted); }
+.grade-arrow { display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: #F0F4FC; color: var(--blue); transition: background .2s, color .2s; }
+.grade-arrow .icon { width: 17px; height: 17px; }
+.grade-card:hover .grade-arrow { background: var(--blue); color: white; }
+.welcome-assurance { display: flex; justify-content: center; align-items: center; gap: 8px; padding: 24px 0 19px; font-size: 11px; color: var(--muted); }
+.welcome-assurance .icon { width: 16px; height: 16px; color: #8B9BB8; }
